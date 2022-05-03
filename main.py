@@ -13,7 +13,7 @@ cur.execute('''CREATE TABLE polaczenia (from_subscriber data_type INTEGER,
 
 def read_data(filename):
     with open(filename, 'r') as fin:
-        reader = csv.reader(fin, delimiter=";")
+        reader = csv.reader(fin, delimiter=",")
         next(reader, None)  # skip the headers
 
         rows = [x for x in reader]
